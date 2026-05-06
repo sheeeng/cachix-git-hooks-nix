@@ -3718,7 +3718,7 @@ lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) hooks.fourm
                   [ (configPath != "") " --config ${configPath}" ]
                 ]);
           in
-          "${hooks.lychee.package}/bin/lychee${cmdArgs} ${hooks.lychee.settings.flags}";
+          "${lib.getExe hooks.lychee.package}${cmdArgs} ${hooks.lychee.settings.flags}";
         types = [ "text" ];
       };
       markdownlint =

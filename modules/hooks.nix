@@ -4077,6 +4077,22 @@ lib.escapeShellArgs (lib.concatMap (ext: [ "--ghc-opt" "-X${ext}" ]) hooks.fourm
             in
             "${binPath} ${cmdArgs}";
         };
+      panache-format =
+        {
+          name = "panache-format";
+          description = "Format Quarto, Pandoc, and Markdown files with panache.";
+          package = tools.panache;
+          entry = "${hooks.panache-format.package}/bin/panache format --force-exclude";
+          files = "\\.(qmd|Rmd|md|markdown|mdown|mkd)$";
+        };
+      panache-lint =
+        {
+          name = "panache-lint";
+          description = "Lint Quarto, Pandoc, and Markdown files with panache.";
+          package = tools.panache;
+          entry = "${hooks.panache-lint.package}/bin/panache lint --force-exclude";
+          files = "\\.(qmd|Rmd|md|markdown|mdown|mkd)$";
+        };
       php-cs-fixer =
         {
           name = "php-cs-fixer";

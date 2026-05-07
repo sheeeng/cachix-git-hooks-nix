@@ -71,6 +71,7 @@
 , ormolu
 , oxfmt ? placeholder "oxfmt"
 , oxlint
+, panache ? placeholder "panache"
 , pkgsBuildBuild
 , poetry
 , pre-commit-hook-ensure-sops ? placeholder "pre-commit-hook-ensure-sops"
@@ -187,6 +188,7 @@ in
     ormolu
     oxfmt
     oxlint
+    panache
     pre-commit-hook-ensure-sops
     prettier
     poetry

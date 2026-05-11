@@ -462,6 +462,7 @@ hooks](modules/pre-commit.nix).
 - [mdformat](https://github.com/hukkin/mdformat)
 - [mdl](https://github.com/markdownlint/markdownlint/)
 - [mdsh](https://zimbatm.github.io/mdsh/)
+- [panache](https://github.com/jolars/panache)
 - [rumdl](https://github.com/rvben/rumdl)
 
 ### Nix
